@@ -80,11 +80,14 @@ h2 + h3{
 }
 
 .cta{
+	& h2{
+		margin-bottom: 1em;
+	}
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top:7em;
-	padding-bottom: 4em;
+	padding-bottom: 5em;
 	background:  
 		linear-gradient( rgba(255, 255, 255, 0.5),  rgba(255, 255, 255, .9)),
 		url("/img/cliff-side-blurred.png");
