@@ -1,40 +1,133 @@
-@import "settings";
-@import "foundation";
+// Global Foundation Settings
+ @import "settings";
 
-// Or selectively include components
-// @import
-//   "foundation/components/accordion",
-//   "foundation/components/alert-boxes",
-//   "foundation/components/block-grid",
-//   "foundation/components/breadcrumbs",
-//   "foundation/components/button-groups",
-//   "foundation/components/buttons",
-//   "foundation/components/clearing",
-//   "foundation/components/dropdown",
-//   "foundation/components/dropdown-buttons",
-//   "foundation/components/flex-video",
-//   "foundation/components/forms",
-//   "foundation/components/grid",
-//   "foundation/components/inline-lists",
-//   "foundation/components/joyride",
-//   "foundation/components/keystrokes",
-//   "foundation/components/labels",
-//   "foundation/components/magellan",
-//   "foundation/components/orbit",
-//   "foundation/components/pagination",
-//   "foundation/components/panels",
-//   "foundation/components/pricing-tables",
-//   "foundation/components/progress-bars",
-//   "foundation/components/reveal",
-//   "foundation/components/side-nav",
-//   "foundation/components/split-buttons",
-//   "foundation/components/sub-nav",
-//   "foundation/components/switches",
-//   "foundation/components/tables",
-//   "foundation/components/tabs",
-//   "foundation/components/thumbs",
-//   "foundation/components/tooltips",
-//   "foundation/components/top-bar",
-//   "foundation/components/type",
-//   "foundation/components/offcanvas",
-//   "foundation/components/visibility";
+// Comment out this import if you are customizing you imports below
+//@import "foundation";
+
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+ @import "foundation"; // *always required
+
+//typography
+$secondary-brand:#657B89;
+
+h1.name{
+	font-size: 1.5em;
+	color: $secondary-brand;
+}
+
+h2 + h3{
+	font-weight: 400;
+	font-style: italic;
+	color: $secondary-brand;
+	margin: .5em 0 1.5em;
+}
+
+
+//nav
+.nav{
+	margin-bottom: 2em;
+}
+//Home page
+
+.full-width{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: 0;
+	background:  
+		linear-gradient( rgba(255, 255, 255, 0),  rgba(255, 255, 255, .75)),
+		url("/img/cliff-side-blurred.png");
+	background-size: cover;
+	padding: 3em 0 0;
+}
+
+.full-width-color{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top:7em;
+	padding-bottom: 4em;
+	background-color: rgba(255,255,255,0.25);
+}
+
+.three-up{
+	padding-top:5em;
+	margin-bottom: 5em;
+	& .fa-book{
+		color: $green-sea;
+	}
+	& .fa-picture-o{
+		color: $amethyst;
+	}
+	& .fa-truck{
+		color: $sun-flower;
+	}
+	& .fa-cc-stripe{
+		color: $belize-hole;
+	}
+	& .fa-heart{
+		color: $alizarin;
+	}
+	& .fa-rocket{
+		color: $emerland;
+	}
+	& .row + .row{
+		margin-top: 3em;
+	}
+}
+
+.cta{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top:7em;
+	padding-bottom: 4em;
+	background:  
+		linear-gradient( rgba(255, 255, 255, 0.5),  rgba(255, 255, 255, .9)),
+		url("/img/cliff-side-blurred.png");
+	background-size: cover;
+}
+
+//animation
+
+.floating{
+    -webkit-box-shadow:0 24px 10px -13px rgba(0,0,0,0.25);
+    -moz-box-shadow:0 24px 10px -13px rgba(0,0,0,0.25);
+    box-shadow:0 24px 10px -13px rgba(0,0,0,0.25);
+
+	animation-name: floating;
+	-webkit-animation-name: floating;
+
+	animation-duration: 7s;	
+	-webkit-animation-duration: 7s;
+
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+	0% {
+		transform: translateY(10%);	
+	}
+	50% {
+		transform: translateY(13%);	
+	}	
+	100% {
+		transform: translateY(10%);
+	}			
+}
+
+@-webkit-keyframes floating {
+	0% {
+		-webkit-transform: translateY(10%);	
+	}
+	50% {
+		-webkit-transform: translateY(13%);	
+	}	
+	100% {
+		-webkit-transform: translateY(10%);
+	}			
+}

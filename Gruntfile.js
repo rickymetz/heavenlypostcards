@@ -16,6 +16,17 @@ module.exports = function(grunt) {
       }
     },
 
+    jade: {
+      pretty: {
+        files: {
+          '/': ['*.jade']
+        },
+        options: {
+          pretty: true
+        }
+      }
+    },
+
     watch: {
       grunt: { files: ['Gruntfile.js'] },
 
